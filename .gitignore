@@ -1,0 +1,5 @@
+node_modules/
+build/
+*-ts.js*
+.vscode/c_cpp_properties.json
+.vscode/settings.json

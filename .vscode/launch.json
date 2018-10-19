@@ -1,0 +1,64 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "JS Debug Build",
+            "console": "integratedTerminal",
+            "program": "${workspaceFolder}/index.js",
+            "preLaunchTask": "npm: build:debug"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "JS Debug",
+            "console": "integratedTerminal",
+            "program": "${workspaceFolder}/index.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "TS Debug Build",
+            "console": "integratedTerminal",
+            "program": "${workspaceFolder}/index-ts.js",
+            "preLaunchTask": "tsc&build:debug"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "TS Debug",
+            "console": "integratedTerminal",
+            "program": "${workspaceFolder}/index-ts.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Electron Debug Build",
+            "console": "integratedTerminal",
+            "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
+            "windows": {
+                "runtimeExecutable": "${workspaceFolder}\\node_modules\\.bin\\electron.cmd"
+            },
+            "program": "${workspaceFolder}/index.js",
+            "preLaunchTask": "build:electron:debug"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Electron Debug",
+            "console": "integratedTerminal",
+            "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
+            "windows": {
+                "runtimeExecutable": "${workspaceFolder}\\node_modules\\.bin\\electron.cmd"
+            },
+            "program": "${workspaceFolder}/index.js"
+        },
+        {
+            "name": "Windows Attach",
+            "type": "cppvsdbg",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        }
+    ]
+}
